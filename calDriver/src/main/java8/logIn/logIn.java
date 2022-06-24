@@ -5,12 +5,10 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import java.io.IOException;
 
 import loginDao.loginDao;
 
@@ -70,7 +68,7 @@ public class logIn extends HttpServlet {
 				session.setAttribute("branch",branch);
 				session.setAttribute("pass",hashtext);
 				response.sendRedirect("unionDashboard.jsp");
-			}else if(name.equals(name)&&branch.contains("Branch") && pass.equals(pass)) {
+			}else if(name.equals(name)&&branch.equals(branch) && pass.equals(pass)) {
 				
 				session.setAttribute("name",name);
 				session.setAttribute("branch",branch);

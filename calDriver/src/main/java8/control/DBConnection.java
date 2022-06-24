@@ -14,6 +14,7 @@ private static Connection conn;
 			if(conn==null)
 			{
 				Class.forName("com.mysql.jdbc.Driver");
+			    //conn = DriverManager.getConnection("jdbc:mysql://localhost/caldriva_ctracker","techLineAfrica","T3klyn@frika_2022");
 				conn = DriverManager.getConnection("jdbc:mysql://localhost/caldriva","root","root");
 			}
 		}catch(Exception e)

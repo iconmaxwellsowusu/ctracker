@@ -11,8 +11,6 @@ public class loginDao {
 	public boolean check(String unions,String branch,String password) {
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			
 			Connection con = DBConnection.getConnection();
 			PreparedStatement st = con.prepareStatement(query);
 			st.setString(1, unions);

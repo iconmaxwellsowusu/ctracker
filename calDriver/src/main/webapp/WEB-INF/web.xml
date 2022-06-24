@@ -22,6 +22,24 @@
   	<description></description>
   	<servlet-class>logIn.testHellio</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>seeLog</servlet-name>
+  	<display-name>seeLog</display-name>
+  	<description></description>
+  	<servlet-class>control.test</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>logS</servlet-name>
+  	<display-name>logS</display-name>
+  	<description></description>
+  	<servlet-class>control.logS</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>seeLogIn</servlet-name>
+  	<display-name>seeLogIn</display-name>
+  	<description></description>
+  	<servlet-class>control.seeLogIn</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>toJson</servlet-name>
   	<url-pattern>/toJson</url-pattern>
@@ -34,4 +52,9 @@
   	<servlet-name>testHellio</servlet-name>
   	<url-pattern>/testHellio</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>seeLogIn</servlet-name>
+  	<url-pattern>/seeLogIn</url-pattern>
+  </servlet-mapping>
+
 </web-app>

@@ -5,12 +5,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import java.io.IOException;
 
 
 
@@ -42,7 +40,7 @@ public class hellio extends HttpServlet {
 		//Your username key
 		 String username = "&username=" + "bntechnology";// it was copied from the page
 		 String password = "&password=" + "BN41104012";
-		 String message = "&message=" + "Hi "+passenger+" Onboard is "+car+" Your Seat Number is "+seat+" And Your Trip Number is **"+trip+"** Powered By: BN Technology ";
+		 String message = "&message=" + "Hi "+passenger+" Onboard is "+car+" Your Seat Number is "+seat+" And Your Trip Number is "+trip+" Powered By: BN Technology ";
 		 String senderId = "&senderId=" + "CALDRIVA";
 		 String msisdn = "&msisdn=" +phone; //also coming from jsp
 		 

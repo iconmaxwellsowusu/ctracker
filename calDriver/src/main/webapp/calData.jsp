@@ -27,6 +27,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="control.DBConnection" %>
 <%@ page import="control.Encrypt" %>
+<%@ page import="control.bEncrypt" %>
 
 <%
 
@@ -1270,7 +1271,6 @@ else if(option.equals("getA")){
 									    String pass = request.getParameter("pass");
 									    String branches = request.getParameter("bBranch");
 									    
-								
 									    
 									    String date = m4;
 									    
@@ -1290,6 +1290,7 @@ else if(option.equals("getA")){
 									    pst.setString(4, name);
 									   
 									    pst.executeUpdate();
+									    bEncrypt.enc(pass,union,branches);
 									    JSONObject obj = new JSONObject();
 									    obj.put("passenger", union);
 									    list.add(obj);

@@ -39,8 +39,6 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
   <!-- Alertify js -->  
  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    
-    
      <style>
     
 body{margin-top:20px;}
@@ -256,8 +254,6 @@ body{margin-top:20px;}
  <div class="card">
         <div class="card-body" align="right">
             <div class="badges">
-                
-                
                 <span class="badge bg-light-success"><i class="fa-solid fa-circle-user fa-2xl"></i>  &nbsp;<%out.println(union); %></span>
                  <div class="btn-group me-1 mb-1">
 			                 <div class="dropdown">
@@ -277,12 +273,7 @@ body{margin-top:20px;}
 			             </div>
             </div>
         </div>
-    </div>
-    
-                                                
-                                                    
-                                                 
-                                                    
+    </div>    
                                                  <!--Danger theme Modal -->
                                                     <div class="modal fade text-left" id="reset" tabindex="-1"
                                                         role="dialog" aria-labelledby="myModalLabel120"

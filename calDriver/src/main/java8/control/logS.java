@@ -1,11 +1,10 @@
-package logIn;
+package control;
 
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,10 +12,33 @@ import javax.servlet.http.HttpSession;
 
 import loginDao.loginDao;
 
-@WebServlet(name = "LoginServlet", value = "/login")
-public class LoginServlet extends HttpServlet {
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+/**
+ * Servlet implementation class logS
+ */
+@WebServlet(name = "logS", value = "/logS")
+public class logS extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public logS() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String name = request.getParameter("union");
 		String branch = request.getParameter("branch");
@@ -74,4 +96,5 @@ public class LoginServlet extends HttpServlet {
 		System.out.println(e);
 		}
 	}
+
 }
